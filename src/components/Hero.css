@@ -1,0 +1,141 @@
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('../images/adson.png');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+    padding-top: 60px;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.hero-text {
+    flex: 1;
+    max-width: 600px;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    color: var(--white);
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    color: #ddd;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.hero-buttons .btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.hero-image {
+    display: none;
+}
+
+.hero-image img {
+    display: none;
+    max-height: 500px;
+}
+
+@media (max-width: 1024px) {
+    .hero-text h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+    }
+
+    .hero-content {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero {
+        min-height: auto;
+        padding: 80px 20px 40px;
+        background-attachment: scroll;
+    }
+
+    .hero-content {
+        flex-direction: column-reverse;
+        gap: 25px;
+        padding: 0;
+    }
+
+    .hero-text h1 {
+        font-size: 1.3rem;
+        line-height: 1.3;
+        text-align: left;
+        width: 74%;
+        margin-bottom: 15px;
+    }
+
+    .hero-subtitle {
+        font-size: 0.82rem;
+        margin-bottom: 20px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 12px;
+        display: flex;
+    }
+
+    .hero-buttons .btn {
+        justify-content: center;
+        margin: auto;
+        width: 60%;
+        font-size: 0.95rem;
+        padding: 10px 20px;
+    }
+
+    .hero-image img {
+        max-height: 280px;
+        border-radius: 10px;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+}

@@ -1,0 +1,407 @@
+.services {
+    background-color: var(--light-bg);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 440px));
+    gap: 40px;
+    margin-bottom: 60px;
+    justify-content: center;
+    justify-items: center;
+}
+
+.service-card {
+    background: var(--white);
+    padding: 40px 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(255, 107, 53, 0.2);
+}
+
+.service-icon {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.swiper {
+    padding: 20px 10px 40px;
+}
+
+.swiper-slide {
+    width: auto;
+}
+
+/* Efeito de opacidade nos lados */
+.swiper-slide {
+    opacity: 0.5;
+    transform: scale(0.95);
+    transition: all 0.3s ease;
+}
+
+.swiper-slide-active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.services .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background: #ccc;
+    opacity: 0.4;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.services .swiper-pagination-bullet-active {
+    width: 19px;
+    border-radius: 20px;
+    background: var(--primary-color);
+    opacity: 1;
+}
+
+.swipe-hint {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #999;
+    margin-top: -10px;
+    margin-bottom: 20px;
+}
+
+.service-card:active {
+    transform: scale(0.97);
+}
+
+.service-card p {
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    flex-grow: 1;
+    font-size: 0.95rem;
+}
+
+.service-price {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.service-card .btn {
+    margin-top: auto;
+    width: 100%;
+}
+
+.reasons-cta-section {
+    background: #000;
+    color: var(--white);
+    padding: 80px 40px;
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
+}
+
+.reasons-container {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+}
+
+.reasons-cta-section .reasons-container {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.reasons-container h3 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 60px;
+    color: var(--white);
+    font-weight: 700;
+}
+
+.reasons-grid {
+    display: none;
+}
+
+.timeline-wrapper {
+    position: relative;
+    padding: 40px 0;
+    margin-bottom: 50px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 30px;
+    top: 0;
+    width: 3px;
+    height: 0;
+    background: linear-gradient(180deg, rgba(255, 107, 53, 0.1), rgba(255, 107, 53, 0.15));
+    transition: height 0.6s ease-out;
+    z-index: 1;
+}
+
+.timeline {
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 120px;
+    margin-bottom: 40px;
+    opacity: 0;
+    transform: translateX(-50px) translateY(0);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    z-index: 2;
+}
+
+/* Quando item se torna visível (ativado pelo IntersectionObserver) */
+.timeline-item.active {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+}
+
+.timeline-dot {
+    position: absolute;
+    left: -30px;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    background: rgba(255, 107, 53, 0.05);
+    border: 3px solid rgba(255, 107, 53, 0.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 107, 53, 0.4);
+    font-size: 1.8rem;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    z-index: 3;
+}
+
+/* Quando item é ativado */
+.timeline-item.active .timeline-dot {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--white);
+    box-shadow: 0 0 0 12px rgba(255, 107, 53, 0.2),
+        0 0 30px rgba(255, 107, 53, 0.6);
+    transform: scale(1.15);
+}
+
+.timeline-content {
+    background: rgba(255, 107, 53, 0.02);
+    border: 1px solid rgba(255, 107, 53, 0.1);
+    border-radius: 10px;
+    padding: 25px;
+    transition: all 0.7s ease-out;
+    opacity: 0.6;
+}
+
+/* Quando item é ativado */
+.timeline-item.active .timeline-content {
+    background: rgba(255, 107, 53, 0.08);
+    border-color: rgba(255, 107, 53, 0.3);
+    opacity: 1;
+}
+
+.timeline-content h4 {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0 0 10px 0;
+    font-weight: 600;
+    transition: color 0.7s ease-out;
+}
+
+/* Quando item é ativado */
+.timeline-item.active .timeline-content h4 {
+    color: var(--primary-color);
+}
+
+.timeline-content p {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.5);
+    line-height: 1.6;
+    margin: 0;
+    transition: color 0.7s ease-out;
+}
+
+/* Quando item é ativado */
+.timeline-item.active .timeline-content p {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.reason-card {
+    display: none;
+}
+
+.reason-icon {
+    display: none;
+}
+
+.reasons-container .btn-lg {
+    display: block;
+    margin: 0 auto;
+    padding: 16px 50px;
+    font-size: 1.1rem;
+}
+
+.btn-lg i {
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        display: none;
+        overflow-x: auto;
+        gap: 15px;
+        margin-bottom: 50px;
+        scroll-snap-type: x mandatory;
+        padding: 10px 10px;
+        -webkit-overflow-scrolling: touch;
+        scroll-behavior: smooth;
+    }
+
+    .services-grid::-webkit-scrollbar {
+        height: 8px;
+    }
+
+    .services-grid::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 10px;
+    }
+
+    .services-grid::-webkit-scrollbar-thumb {
+        background: var(--primary-color);
+        border-radius: 10px;
+    }
+
+    .services-grid::-webkit-scrollbar-thumb:hover {
+        background: #e55a1f;
+    }
+
+    .service-card {
+        padding: 20px 15px;
+        min-width: 280px;
+        flex-shrink: 0;
+        scroll-snap-align: start;
+        scroll-snap-stop: always;
+        margin: 50px 0;
+    }
+
+    .service-icon {
+        font-size: 2.5rem;
+        margin-bottom: 12px;
+    }
+
+    .service-card h3 {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+
+    .service-card p {
+        margin-bottom: 15px;
+        font-size: 0.85rem;
+    }
+
+    .service-price {
+        font-size: 0.95rem;
+        margin-bottom: 15px;
+    }
+
+    .reasons-cta-section {
+        padding: 50px 20px;
+    }
+
+    .reasons-container h3 {
+        font-size: 1.8rem;
+        margin-bottom: 40px;
+    }
+
+    .timeline {
+        padding: 30px 0;
+        margin-bottom: 30px;
+        max-width: 100%;
+    }
+
+    .timeline::before {
+        left: 20px;
+        width: 2px;
+    }
+
+    .timeline-item {
+        padding-left: 90px;
+        margin-bottom: 30px;
+    }
+
+    .timeline-dot {
+        left: -26px;
+        width: 50px;
+        height: 50px;
+        font-size: 1.4rem;
+    }
+
+    .timeline-item.lit .timeline-dot,
+    .timeline-item.active .timeline-dot {
+        transform: scale(1.15);
+        box-shadow: 0 0 0 10px rgba(255, 107, 53, 0.2),
+            0 0 20px rgba(255, 107, 53, 0.5);
+    }
+
+    .timeline-line {
+        left: 20px;
+        top: 20px;
+        width: 25px;
+        height: 2px;
+    }
+
+    .timeline-item.lit .timeline-line,
+    .timeline-item.active .timeline-line {
+        width: 50px;
+    }
+
+    .timeline-content {
+        padding: 20px;
+    }
+
+    .timeline-content h4 {
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+    }
+
+    .timeline-content p {
+        font-size: 0.85rem;
+    }
+
+    .reasons-container .btn-lg {
+        width: 100%;
+        padding: 14px 30px;
+        font-size: 1rem;
+    }
+}
