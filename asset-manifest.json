@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/AdsonPersonal/static/css/main.725a72bb.css",
+    "main.js": "/AdsonPersonal/static/js/main.c3c720b6.js",
+    "static/media/adson.png": "/AdsonPersonal/static/media/adson.3f831d1ad3a23a80046c.png",
+    "index.html": "/AdsonPersonal/index.html",
+    "main.725a72bb.css.map": "/AdsonPersonal/static/css/main.725a72bb.css.map",
+    "main.c3c720b6.js.map": "/AdsonPersonal/static/js/main.c3c720b6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.725a72bb.css",
+    "static/js/main.c3c720b6.js"
+  ]
+}
