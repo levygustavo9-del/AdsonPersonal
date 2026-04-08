@@ -1,7 +1,17 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './Comments.css';
 
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/pagination';
+
+import { Pagination, Autoplay } from 'swiper/modules';
+
+
 function Comments() {
+
+    const [isMobile, setIsMobile] = useState(() => window.innerWidth <= 768);
+
     const comments = [
         {
             id: 1,
@@ -59,6 +69,8 @@ function Comments() {
         window.open(whatsappLink, '_blank');
     };
 
+
+
     const handleSignContract = () => {
         // TODO: Adicionar link para seu formulário de contrato/inscrição
         // Opções:
@@ -77,6 +89,15 @@ function Comments() {
         ));
     };
 
+    useEffect(() => {
+        const handleResize = () => {
+            setIsMobile(window.innerWidth <= 768);
+        };
+
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
     return (
         <section id="comments" className="comments">
             <div className="container">
@@ -85,23 +106,63 @@ function Comments() {
                     Veja o que meus alunos dizem sobre sua experiência comigo
                 </p>
 
-                <div className="comments-grid">
-                    {comments.map((comment) => (
-                        <div key={comment.id} className="comment-card fade-in-up">
-                            <div className="comment-header">
-                                <div className="comment-avatar">{comment.image}</div>
-                                <div className="comment-info">
-                                    <h4>{comment.name}</h4>
-                                    <p>{comment.role}</p>
+                {isMobile ? (
+                    <Swiper
+                        modules={[Pagination, Autoplay]}
+                        spaceBetween={16}
+                        slidesPerView={1.2}
+                        centeredSlides={true}
+                        loop={true}
+                      
+                        autoplay={{
+                            delay: 0,
+                            disableOnInteraction: false
+                        }}
+                        speed={4500}
+                        slidesOffsetBefore={10}
+                        slidesOffsetAfter={10}
+                    >
+                        {comments.map((comment) => (
+                            <SwiperSlide key={comment.id}>
+                                <div className="comment-card">
+                                    <div className="comment-header">
+                                        <div className="comment-avatar">{comment.image}</div>
+                                        <div className="comment-info">
+                                            <h4>{comment.name}</h4>
+                                            <p>{comment.role}</p>
+                                        </div>
+                                    </div>
+
+                                    <div className="comment-stars">
+                                        {renderStars(comment.stars)}
+                                    </div>
+
+                                    <p className="comment-text">"{comment.text}"</p>
                                 </div>
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+                ) : (
+                    <div className="comments-grid">
+                        {comments.map((comment) => (
+                            <div key={comment.id} className="comment-card fade-in-up">
+                                <div className="comment-header">
+                                    <div className="comment-avatar">{comment.image}</div>
+                                    <div className="comment-info">
+                                        <h4>{comment.name}</h4>
+                                        <p>{comment.role}</p>
+                                    </div>
+                                </div>
+
+                                <div className="comment-stars">
+                                    {renderStars(comment.stars)}
+                                </div>
+
+                                <p className="comment-text">"{comment.text}"</p>
                             </div>
-                            <div className="comment-stars">
-                                {renderStars(comment.stars)}
-                            </div>
-                            <p className="comment-text">"{comment.text}"</p>
-                        </div>
-                    ))}
-                </div>
+                        ))}
+                    </div>
+                )}
 
                 <div className="cta-section">
                     <div className="cta-content">
@@ -125,7 +186,7 @@ function Comments() {
 
                         <div className="cta-buttons">
                             <button onClick={handleWhatsAppClick} className="btn btn-primary btn-large">
-                                💬 Fale Comigo no WhatsApp
+                             Dê o primeiro passo!
                             </button>
                         </div>
 

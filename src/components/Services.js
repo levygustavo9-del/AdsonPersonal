@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/pagination';
 
-import { Pagination, Autoplay } from 'swiper/modules';
+import { Pagination } from 'swiper/modules';
 
 function Services({ onContactClick }) {
     const [hoveredReason, setHoveredReason] = useState(null);
