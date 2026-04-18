@@ -65,7 +65,7 @@ function Services({ onContactClick }) {
             observer.disconnect();
             window.removeEventListener('scroll', handleScroll);
         };
-    }, []);
+    }, [updateTimelineLine]);
 
     useEffect(() => {
         const handleResize = () => {

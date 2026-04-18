@@ -71,18 +71,6 @@ function Comments() {
 
 
 
-    const handleSignContract = () => {
-        // TODO: Adicionar link para seu formulário de contrato/inscrição
-        // Opções:
-        // 1. Google Form: https://forms.gle/seu_formulario
-        // 2. TypeForm: https://seu_typeform.com
-        // 3. Outra plataforma de formulários
-        // Por enquanto, direciona para WhatsApp com mensagem de contrato
-        const message = 'Olá! Gostaria de formalizar minha inscrição no programa de treinamento.';
-        const whatsappLink = `https://wa.me/5511999999999?text=${encodeURIComponent(message)}`;
-        window.open(whatsappLink, '_blank');
-    };
-
     const renderStars = (count) => {
         return [...Array(5)].map((_, i) => (
             <i key={i} className={`fas fa-star ${i < count ? 'filled' : 'empty'}`}></i>
@@ -113,7 +101,7 @@ function Comments() {
                         slidesPerView={1.2}
                         centeredSlides={true}
                         loop={true}
-                      
+
                         autoplay={{
                             delay: 0,
                             disableOnInteraction: false
@@ -186,7 +174,7 @@ function Comments() {
 
                         <div className="cta-buttons">
                             <button onClick={handleWhatsAppClick} className="btn btn-primary btn-large">
-                             Dê o primeiro passo!
+                                Dê o primeiro passo!
                             </button>
                         </div>
 

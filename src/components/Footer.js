@@ -24,7 +24,7 @@ function Footer({ onContactClick }) {
                             <a href="https://wa.me/558294004348" target="_blank" rel="noopener noreferrer" title="WhatsApp">
                                 <i className="fab fa-whatsapp"></i>
                             </a>
-                           
+
                         </div>
                     </div>
 
@@ -62,7 +62,7 @@ function Footer({ onContactClick }) {
 
                         </ul>
                         <button className="btn btn-primary btn-footer" >
-                            <a href="https://wa.me/558294004348" target='_blank'><i className="fab fa-whatsapp"></i> Conversar</a>
+                            <a href="https://wa.me/558294004348" target='_blank' rel='noreferrer'><i className="fab fa-whatsapp"></i> Conversar</a>
                         </button>
                     </div>
                 </div>
@@ -86,7 +86,7 @@ function Footer({ onContactClick }) {
                             Lêvy Gustavo
                         </a>
 
-                       
+
                     </div>
                 </div>
             </div>
