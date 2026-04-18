@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/AdsonPersonal/static/css/main.69abe1a0.css",
-    "main.js": "/AdsonPersonal/static/js/main.56e348da.js",
+    "main.css": "/AdsonPersonal/static/css/main.4cbdd174.css",
+    "main.js": "/AdsonPersonal/static/js/main.95f93129.js",
     "static/media/adson-mobile.png": "/AdsonPersonal/static/media/adson-mobile.d085102ce3eb983add6f.png",
     "static/media/adson.png": "/AdsonPersonal/static/media/adson.3f831d1ad3a23a80046c.png",
     "index.html": "/AdsonPersonal/index.html",
-    "main.69abe1a0.css.map": "/AdsonPersonal/static/css/main.69abe1a0.css.map",
-    "main.56e348da.js.map": "/AdsonPersonal/static/js/main.56e348da.js.map"
+    "main.4cbdd174.css.map": "/AdsonPersonal/static/css/main.4cbdd174.css.map",
+    "main.95f93129.js.map": "/AdsonPersonal/static/js/main.95f93129.js.map"
   },
   "entrypoints": [
-    "static/css/main.69abe1a0.css",
-    "static/js/main.56e348da.js"
+    "static/css/main.4cbdd174.css",
+    "static/js/main.95f93129.js"
   ]
 }
