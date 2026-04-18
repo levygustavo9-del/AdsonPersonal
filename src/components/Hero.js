@@ -13,10 +13,10 @@ const Hero = ({ onContactClick }) => {
                     </p>
                     <div className="hero-buttons">
                         <button className="btn btn-primary" onClick={onContactClick}>
-                           Começar Agora
+                            Começar Agora
                         </button>
                         <button className="btn btn-secondary" onClick={() => {
-                            const aboutSection = document.getElementById('sobre');
+                            const aboutSection = document.getElementById('about');
                             if (aboutSection) {
                                 aboutSection.scrollIntoView({ behavior: 'smooth' });
                             }

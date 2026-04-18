@@ -15,7 +15,7 @@ function Footer({ onContactClick }) {
                             Transformando vidas através de treinos personalizados, dedicação e profissionalismo.
                         </p>
                         <div className="social-links">
-                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram">
+                            <a href="https://www.instagram.com/adsonwsilva/" target="_blank" rel="noopener noreferrer" title="Instagram">
                                 <i className="fab fa-instagram"></i>
                             </a>
                             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" title="Facebook">
@@ -24,9 +24,7 @@ function Footer({ onContactClick }) {
                             <a href="https://wa.me/558294004348" target="_blank" rel="noopener noreferrer" title="WhatsApp">
                                 <i className="fab fa-whatsapp"></i>
                             </a>
-                            <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" title="YouTube">
-                                <i className="fab fa-youtube"></i>
-                            </a>
+                           
                         </div>
                     </div>
 

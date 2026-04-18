@@ -11,9 +11,10 @@ function About() {
                     <div className="about-text fade-in-up">
                         <h3>Personal Trainer Especializado</h3>
                         <p>
-                            Olá! Sou o Adson, personal trainer com anos de experiência e dedicação na transformação corporal
-                            e desenvolvimento fitness. Minha missão é ajudar você a alcançar seus objetivos com treinos
-                            personalizados, orientação nutricional e suporte constante.
+                            Olá! Sou Adson, personal trainer com mais de 6 anos de experiência prática no universo do treinamento físico.
+                        </p>
+                        <p>
+                            Mesmo antes de atuar profissionalmente, sempre estive envolvido com o estilo de vida fitness, desenvolvendo disciplina, constância e conhecimento na prática. Ao longo dos anos, essa paixão se transformou em trabalho, permitindo que eu ajudasse diretamente mais de 150 pessoas a evoluírem fisicamente, seja através de treinos personalizados, orientações ou acompanhamento.
                         </p>
 
                         <h4>Por que treinar comigo?</h4>
@@ -46,28 +47,26 @@ function About() {
 
                         <h4>Minha Experiência</h4>
                         <p>
-                            Acumulo mais de 5 anos de experiência em treinamento personalizado, com centenas de alunos
-                            satisfeitos e transformações impressionantes. Sou apaixonado por fitness e dedicado a cada
-                            detalhe do seu progresso.
+                            Em formação em Educação Física (Bacharelado) e com experiência prática no treinamento de alunos iniciantes, intermediários e avançados, desenvolvi uma abordagem focada em resultados consistentes, respeitando a individualidade de cada pessoa. Meu objetivo é oferecer treinos direcionados, com acompanhamento real e foco na evolução segura e eficiente.
                         </p>
                     </div>
 
                     <div className="about-stats fade-in">
                         <div className="stat-card">
-                            <h4>+500</h4>
-                            <p>Alunos Treinados</p>
+                            <h4>+150</h4>
+                            <p>Pessoas impactadas</p>
                         </div>
                         <div className="stat-card">
-                            <h4>+1000</h4>
-                            <p>Transformações Completadas</p>
-                        </div>
-                        <div className="stat-card">
-                            <h4>5+</h4>
-                            <p>Anos de Experiência</p>
+                            <h4>6+ anos</h4>
+                            <p>Vivência no treino</p>
                         </div>
                         <div className="stat-card">
                             <h4>100%</h4>
-                            <p>Satisfação dos Clientes</p>
+                            <p>Foco em resultados reais</p>
+                        </div>
+                        <div className="stat-card">
+                            <h4>Treinos personalizados</h4>
+                            <p>Para cada objetivo</p>
                         </div>
                     </div>
                 </div>
